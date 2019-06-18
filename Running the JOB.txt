@@ -1,0 +1,23 @@
+Running the JOB:
+
+
+1. Moving the ".csv" data-set file from LocalFileSystem to HDFS
+	
+Syntax:	$ hadoop fs -put <.csv LocalFS path>  <destination HDFS path>
+	eg:	$ hadoop fs -put /home/ajx/hadoop-2.9.2_space/input/ratings1.csv /user/Movie/input
+
+
+2. Running the MapReduce Job
+
+Syntax:	$ hadoop jar <JAR file path in LocalFS>  <class path in that JAR>  <HDFS input directory>  <HDFS output directory - this directory should not exist>
+	eg:	$ hadoop jar /home/ajx/hadoop-2.9.2_space/JAR/MovieRating.jar ajinkya/wc/Movie /user/Movie/input /user/Movie/output     
+
+3. Display output to the console
+
+Syntax: $ hadoop fs -cat <Output directory from the Mapreduce JOB with the filename>
+	eg: $ hadoop fs -cat /user/Movie/output/part-r-00000
+
+4. Copy the output from HDFS to the LocalFS
+
+Syntax: $ hdfs dfs -copyToLocal <HDFS path> <LocalFS path>
+	eg: $ hdfs dfs -copyToLocal /user/Movie/output/part-r-00000 /home/ajx/hadoop-2.9.2_space/output
