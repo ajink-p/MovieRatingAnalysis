@@ -1,7 +1,7 @@
 # MovieRatingAnalysis
 MapReduce job for counting the movie ratings from a dataset of about 100k records
 
-This is a implementation of movie rating analysis using MapReduce.
+This is an implementation of movie rating analysis using MapReduce.
 The mapreduce job analyse the dataset to display the total count of each rating.
 For further information about running the job check the "Running the JOB.txt"
 
