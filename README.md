@@ -6,8 +6,10 @@ The mapreduce job analyse the dataset to display the total count of each rating.
 For further information about running the job check the "Running the JOB.txt"
 
 
-JAR 	: MovieRating.jar | 
-DataSet : ratings1.csv  |  
+JAR 	: MovieRating.jar 
+
+DataSet : ratings1.csv  
+
 Output 	: part-r-00000
 
 
